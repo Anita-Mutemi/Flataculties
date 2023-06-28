@@ -14,6 +14,8 @@ function fetchAnimals() {
     animals.forEach(animal => {
         const listItem = document.createElement('li');
         listItem.textContent = animal.name;
+        listItem.style.listStyleType= 'none';
+        listItem.style.fontSize= '2rem';
         listItem.addEventListener('click', () => displayAnimalDetails(animal.id));
         animalList.appendChild(listItem);
     });
@@ -25,6 +27,7 @@ function fetchAnimals() {
         .then(response => response.json())
         .then(animal => {
         const animalDetails = document.getElementById('animal-details');
+        animalDetails.style.fontSize= '2.5rem'
         animalDetails.innerHTML = `
             <h3>${animal.name}</h3>
             <img src="${animal.image}" alt="${animal.name}">
