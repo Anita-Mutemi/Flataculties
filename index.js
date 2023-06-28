@@ -1,4 +1,4 @@
-// Fetch animal data from the server
+// Fetch animal data from the http link
 function fetchAnimals() {
     fetch('http://localhost:3000/characters')
         .then(response => response.json())
