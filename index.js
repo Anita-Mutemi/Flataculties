@@ -62,16 +62,6 @@ function fetchAnimals() {
     }
 
     init();
-//connect to json
-function Func() {
-    fetch("./db.json")
-    .then((res) => {
-    return res.json();
-    })
-.then((data) => console.log(data));
-}  
-const sample = require('./db.json');
-console.log(sample);
 
 
 // function to get characters
